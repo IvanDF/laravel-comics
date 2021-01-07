@@ -12,4 +12,9 @@
 
 // Pages
     // Header
-    @import'partials/main-header'
+    @import'partials/main-header';
+    // Home
+        // Hero
+        @import'partials/home/hero';
+        // Comics
+        @import'partials/home/comics';

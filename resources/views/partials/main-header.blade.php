@@ -11,7 +11,9 @@
     </div>
     <nav class="navbar pt-1 pb-1">
         <div class="container hListSpaceBtw">
-            <img src="{{ asset('img/logo/logo.png')}}" alt="CD COMICS LOGO">
+            <a href="/">
+                <img src="{{ asset('img/logo/logo.png')}}" alt="CD COMICS LOGO">
+            </a>
             <ul class="hList navbarList">
                 <!-- farlo in vue -->
                 <li class="navbarItem">

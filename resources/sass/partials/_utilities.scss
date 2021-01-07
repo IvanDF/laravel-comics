@@ -79,3 +79,16 @@
     height: auto;
     display: block;
 }
+
+// Buttons
+.btn {
+    padding: 10px 50px;
+    outline: none;
+    border: none;
+    background: none;
+    &.btnPrimary {
+        background: palette(1);
+        color: $white;
+        font-weight: bold;
+    }
+}

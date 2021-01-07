@@ -5,5 +5,5 @@
 @endsection
 
 @section('content')
-    <h1>Main section</h1>
+    @include('partials.comics')
 @endsection
