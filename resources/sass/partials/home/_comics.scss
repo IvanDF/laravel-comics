@@ -1,6 +1,19 @@
 .comics {
+    position: relative;
+    top: -85px;
+    z-index: 2;
     background: palette(4);
     color: $white;
+    .comicsType {
+        font-weight: bold;
+        position: absolute;
+        top: 0;
+        transform: translateY(-100%) translateX(-20%);
+        padding: 10px 15px;
+        font-size: 2rem;
+        background: palette(1);
+        color: $white;
+    }
 }
 .comicsList {
     display: grid;

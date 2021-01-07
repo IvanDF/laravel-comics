@@ -6120,7 +6120,7 @@ readers do not read off random characters that represent icons */
 }
 
 body {
-  font: 16px "Nunito", Sans-Serif;
+  font: 16px "Hammersmith One", sans-serif;
 }
 
 a {
@@ -6443,7 +6443,20 @@ a {
 }
 
 .comics {
+  position: relative;
+  top: -85px;
+  z-index: 2;
   background: #1c1c1c;
+  color: #fff;
+}
+.comics .comicsType {
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  transform: translateY(-100%) translateX(-20%);
+  padding: 10px 15px;
+  font-size: 2rem;
+  background: #0282f9;
   color: #fff;
 }
 
