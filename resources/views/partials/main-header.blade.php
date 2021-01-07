@@ -3,8 +3,10 @@
         <div class="container ">
             <ul class="hListRight txtRight">
                 <li>
-                    <a href="">DC POWER <span class="apex">SM</span> VISA <span class="apex">&copy;</span></a>
-                    <a href="">ADDITIONAL DC SITES <i class="fas fa-angle-down"></i></a>
+                    <a href="#">DC POWER <span class="apex">SM</span> VISA <span class="apex">&copy;</span></a>
+                </li>
+                <li class="pl-1">
+                    <a href="#">ADDITIONAL DC SITES <i class="fas fa-angle-down"></i></a>
                 </li>
             </ul>
         </div>
@@ -49,5 +51,5 @@
             </ul>
             <input class="txtRight" type="text" placeholder="Search">
         </div>
-        </nav>
-    </div>
+    </nav>
+</div>

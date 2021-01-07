@@ -18,7 +18,7 @@
 
             <!-- Main section -->
             @yield('content')
-
+            
             <!-- Main Footer -->
             @include('partials.main-footer')
 

@@ -1,8 +1,16 @@
 .mainHeader {
     .topNav {
+        font-size: 0.6rem;
+        padding: 5px 0;
+        font-weight: bold;
         background: palette(1);
         a {
             color: $white;
+        }
+        .apex {
+            position: relative;
+            font-size: 0.5rem;
+            bottom: 4px;
         }
     }
     .navbar {

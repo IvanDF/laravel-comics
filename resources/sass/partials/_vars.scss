@@ -1,5 +1,5 @@
 // Colors
-$palette:(#0282f9, #464646, #303030, #1c1c1c);
+$palette:(#0282f9, #464646, #303030, #1c1c1c, #55ba59);
 
 @function palette($col) {
     @return nth($palette, $col);
@@ -7,6 +7,8 @@ $palette:(#0282f9, #464646, #303030, #1c1c1c);
 
 $white: #fff;
 $black: #000;
+
+$comicTitle: #003f5e;
 
 // Base font
 $baseFont: 16px 'Nunito', Sans-Serif;

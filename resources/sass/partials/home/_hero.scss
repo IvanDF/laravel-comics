@@ -12,6 +12,12 @@
         height: 100px;
         background: palette(1);
     }
+    .heroBg {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+        width: 100%;
+    }
     .coverImg {
         position: absolute;
         z-index: 1;

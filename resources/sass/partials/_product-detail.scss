@@ -1,0 +1,32 @@
+.mainSection {
+    display: flex;
+    .adv {
+        padding-left: 20px;
+        width: 30%;
+    }
+}
+.comic {
+    flex-basis: 70%;
+    .comicTitle {
+        font-size: 2rem;
+        color: $comicTitle;
+    }
+    .priceContainer {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: solid 1px;
+        color: $white;
+        font-weight: bold;
+        .price {
+            flex-grow: 1;
+            border-right: solid 1px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .price,
+        .availability {
+            padding: 20px;
+            background: palette(5);
+        }
+    }
+}

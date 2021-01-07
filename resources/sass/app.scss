@@ -1,6 +1,7 @@
 // IMPORT FONTAWESOME
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
 
 // GENERAL SETTINGS
     // VARS
@@ -18,3 +19,11 @@
         @import'partials/home/hero';
         // Comics
         @import'partials/home/comics';
+        // Info bar
+        @import'partials/home/info-bar';
+
+// Comics
+@import'partials/product-detail';
+
+// Comics
+@import'partials/main-footer';

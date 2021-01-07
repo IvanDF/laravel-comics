@@ -1,0 +1,16 @@
+.infoBar {
+    padding: 50px;
+    background: palette(1);
+    .infoBarItem {
+        padding: 0 20px;
+    }
+    img {
+        height: 50px;
+        margin-right: 10px;
+    }
+    a {
+        display: flex;
+        align-items: center;
+        color: $white;
+    }
+}
