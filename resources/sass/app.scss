@@ -2,12 +2,14 @@
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 
-// Prova
-h1 {
-    color: darkolivegreen;
-    font-size: 102px;
-    &:first-child {
-        @extend h1;
-        background: #000;
-    }
-}
+// GENERAL SETTINGS
+    // VARS
+    @import'partials/vars';
+    // Commons
+    @import'partials/commons';
+    // Utilities
+    @import'partials/utilities';
+
+// Pages
+    // Header
+    @import'partials/main-header'

@@ -1,0 +1,81 @@
+// Container
+.container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    &Small {
+        @extend .container;
+        width: 1000px;
+    }
+}
+
+// Lists
+.vList {
+    list-style: none;
+}
+
+.hList {
+    display: flex;
+    list-style: none;
+    &Center {
+        @extend .hList;
+        justify-content: center;
+        align-items: center
+    }
+    &SpaceBtw {
+        @extend .hList;
+        justify-content: space-between;
+        align-items: center
+    }
+    &Left {
+        @extend .hList;
+        justify-content: flex-start;
+    }
+    &Right {
+        @extend .hList;
+        justify-content: flex-end;
+    }
+}
+
+// Texts
+.txtCenter {
+    text-align: center;
+}
+.txtRight {
+    text-align: right;
+}
+
+// Margins & Paddings
+@each $size in 0, 1, 2, 3, 4 {
+    .mt-#{$size} {
+        margin-top: $size + rem;
+    }
+    .mb-#{$size} {
+        margin-bottom: $size + rem;
+    }
+    .ml-#{$size} {
+        margin-left: $size + rem;
+    }
+    .mr-#{$size} { 
+        margin-right: $size + rem;
+    }
+    .pt-#{$size} {
+        padding-top: $size + rem;
+    }
+    .pb-#{$size} {
+        padding-bottom: $size + rem;
+    }
+    .pl-#{$size} {
+        padding-left: $size + rem;
+    }
+    .pr-#{$size} {
+        padding-right: $size + rem;
+    }
+}
+
+// Images
+.imgResp {
+    width: 100%;
+    height: auto;
+    display: block;
+}

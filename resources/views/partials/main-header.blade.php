@@ -1,0 +1,51 @@
+<div class="mainHeader">
+    <div class="topNav">
+        <div class="container ">
+            <ul class="hListRight txtRight">
+                <li>
+                    <a href="">DC POWER <span class="apex">SM</span> VISA <span class="apex">&copy;</span></a>
+                    <a href="">ADDITIONAL DC SITES <i class="fas fa-angle-down"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <nav class="navbar pt-1 pb-1">
+        <div class="container hListSpaceBtw">
+            <img src="{{ asset('img/logo/logo.png')}}" alt="CD COMICS LOGO">
+            <ul class="hList navbarList">
+                <!-- farlo in vue -->
+                <li class="navbarItem">
+                    <a href="">CHARACTERS</a>
+                </li>
+                <li class="navbarItem">
+                    <a href="">COMICS</a>
+                </li>
+                <li class="navbarItem">
+                    <a href="">MOVIES</a>
+                </li>
+                <li class="navbarItem">
+                    <a href="">TV</a>
+                </li>
+                <li class="navbarItem">
+                    <a href="">GAMES</a>
+                </li>
+                <li class="navbarItem">
+                    <a href="">COLLECTIBLES</a>
+                </li>
+                <li class="navbarItem">
+                    <a href="">VIDEOS</a>
+                </li>
+                <li class="navbarItem">
+                    <a href="">FANS</a>
+                </li>
+                <li class="navbarItem">
+                    <a href="">NEWS</a>
+                </li>
+                <li class="navbarItem">
+                    <a href="">SHOP <i class="fas fa-angle-down"></i></a>
+                </li>
+            </ul>
+            <input class="txtRight" type="text" placeholder="Search">
+        </div>
+        </nav>
+    </div>

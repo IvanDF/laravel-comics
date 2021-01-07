@@ -1,0 +1,12 @@
+// Colors
+$palette:(#0282f9, #464646, #303030, #1c1c1c);
+
+@function palette($col) {
+    @return nth($palette, $col);
+}
+
+$white: #fff;
+$black: #000;
+
+// Base font
+$baseFont: 16px 'Nunito', Sans-Serif;
