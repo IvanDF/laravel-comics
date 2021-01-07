@@ -1,3 +1,13 @@
 // IMPORT FONTAWESOME
 @import '~@fortawesome/fontawesome-free/scss/fontawesome';
 @import '~@fortawesome/fontawesome-free/scss/solid';
+
+// Prova
+h1 {
+    color: darkolivegreen;
+    font-size: 102px;
+    &:first-child {
+        @extend h1;
+        background: #000;
+    }
+}
