@@ -4,7 +4,7 @@
     </div>
     <div class="comicsList">
         @foreach ($comics as $el)
-            <a href="{{ route('product-detail', $el['id'])}}" class="comicCard">
+            <a href="{{ route('product-detail', $el['urlName'])}}" class="comicCard">
                 <img class="imgResp mb-1" src="{{$el['image']}}" alt="{{$el['title']}}">
                 <small>{{$el['title']}}</small>
             </a>
@@ -15,7 +15,7 @@
     </div>
 </div>
 <!-- Info bar -->
-<div class="infoBar mb-5">
+<div class="infoBar">
     <ul class="infoBarList hListCenter">
         <li class="infoBarItem">
             <a href="#">

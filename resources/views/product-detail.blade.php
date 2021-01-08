@@ -1,7 +1,7 @@
 @extends('layouts.main-content')
 
 @section('page-title')
-        <title>Titolo</title>
+        <title>{{$comic['title']}}</title>
 @endsection
 
 @section('content')

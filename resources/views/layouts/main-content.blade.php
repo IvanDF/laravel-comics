@@ -9,6 +9,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
         <!-- Main styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css')}}">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="{{ asset('img/logo/favicon/favicon.png')}}" type="image/x-icon">
     </head>
     <body>
     

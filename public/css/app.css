@@ -6586,3 +6586,31 @@ a {
   color: #303030;
   border-radius: 50%;
 }
+
+.error404 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error404 .text {
+  position: relative;
+}
+.error404 .text h2 {
+  position: relative;
+  font-size: 180px;
+  line-height: 150px;
+}
+.error404 .text small {
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+.error404 .text::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -25%;
+  width: 3px;
+  height: 150%;
+  background: #000;
+}
