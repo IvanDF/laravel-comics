@@ -1,8 +1,8 @@
 .error404 {
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
     .text {
         h2 {
             position: relative;

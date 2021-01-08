@@ -6409,6 +6409,35 @@ a {
   font-weight: bold;
   color: #000;
 }
+.mainHeader .navbar input {
+  border: none;
+  outline: none;
+  padding: 5px 30px;
+  font-size: 1rem;
+  border-bottom: 2px solid #0282f9;
+  max-width: 120px;
+}
+.mainHeader .navbar input::-moz-placeholder {
+  color: #000;
+}
+.mainHeader .navbar input:-ms-input-placeholder {
+  color: #000;
+}
+.mainHeader .navbar input::placeholder {
+  color: #000;
+}
+.mainHeader .navbar .search {
+  position: relative;
+}
+.mainHeader .navbar .search::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+  content: "\F002";
+  position: absolute;
+  right: 5px;
+  top: 0;
+  transform: translateY(35%);
+}
 .mainHeader .navbar img {
   height: 80px;
 }
@@ -6521,6 +6550,66 @@ a {
   background: #55ba59;
 }
 
+.moreInfo {
+  background: rgba(70, 70, 70, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.moreInfoContent {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.moreInfoContent .talent,
+.moreInfoContent .specs {
+  padding: 20px;
+  width: 100%;
+  color: #003f5e;
+}
+.moreInfoContent .talentItem,
+.moreInfoContent .specsItem {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.moreInfoContent .talentItem span,
+.moreInfoContent .specsItem span {
+  min-width: 300px;
+  text-align: left;
+}
+.moreInfoContent .talentItem span.blue,
+.moreInfoContent .specsItem span.blue {
+  color: #0282f9;
+}
+.moreInfoContent .talentItem span.blue .dot,
+.moreInfoContent .specsItem span.blue .dot {
+  color: #003f5e;
+}
+.moreInfoContent h3 {
+  font-size: 1.5rem;
+}
+
+.comicDetail {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0 0 50px 0;
+  background: rgba(70, 70, 70, 0.2);
+}
+.comicDetail a {
+  color: #000;
+}
+.comicDetail .infoBarItem {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: none;
+  padding: 20px;
+}
+.comicDetail .infoBarItem h5 {
+  padding-right: 50px;
+  align-self: flex-start;
+  color: rgba(70, 70, 70, 0.5);
+}
+
 .mainFooter .footerNav {
   display: flex;
 }
@@ -6587,11 +6676,17 @@ a {
   border-radius: 50%;
 }
 
-.error404 {
+.errors {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
+}
+
+.error404 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
 }
 .error404 .text {
   position: relative;

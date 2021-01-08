@@ -49,7 +49,9 @@
                     <a href="">SHOP <i class="fas fa-angle-down"></i></a>
                 </li>
             </ul>
-            <input class="txtRight" type="text" placeholder="Search">
+            <div class="search">
+                <input class="txtRight" type="text" placeholder="Search">
+            </div>
         </div>
     </nav>
 </div>

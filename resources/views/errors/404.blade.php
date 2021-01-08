@@ -1,11 +1,11 @@
-@extends('layouts.main-content')
+@extends('layouts.error-page')
 
 @section('page-title')
-    <title>Error 404 :(</title>
+    <title>Error 404 - Page does not exist</title>
 @endsection
 
 @section('content')
-    <div class="error404">
+    <div class="errorPahe error404">
         <div class="text txtCenter pr-2">
             <h2>404</h2>
             <small>Page does not exist</small>
