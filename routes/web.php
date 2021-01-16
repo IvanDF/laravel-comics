@@ -13,8 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// HOMEPAGE
 Route::get('/', 'HomeController@index')->name('home');
 
-// PRODUCT DETAIL
-Route::get('/product-detail/{urlName}', 'ProductController@show')->name('product-detail');
+Route::get('/product-detail/{urlName}', 'ComicController@show')->name('comic-detail');

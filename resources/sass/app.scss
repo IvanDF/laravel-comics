@@ -4,29 +4,21 @@
 @import '~@fortawesome/fontawesome-free/scss/brands';
 
 // GENERAL SETTINGS
-    // VARS
-    @import'partials/vars';
-    // Commons
-    @import'partials/commons';
-    // Utilities
-    @import'partials/utilities';
 
-// Pages
-    // Header
-    @import'partials/main-header';
-    // Home 
-        // Hero
-        @import'partials/home/hero';
-        // Comics
-        @import'partials/home/comics';
-        // Info bar
-        @import'partials/home/info-bar';
+// Vars
+@import 'partials/general/vars';
+// Utilities
+@import 'partials/general/utilities';
+// Commons
+@import 'partials/general/commons';
 
-// Comics
-@import'partials/product-detail';
+// PAGES
+
+// Main Header
+@import 'partials/pages/main-header';
+
+// Comics page
+@import 'partials/pages/comics';
 
 // Main Footer
-@import'partials/main-footer';
-
-// ERRORS
-@import'partials/errors/errors';
+@import 'partials/pages/main-footer';

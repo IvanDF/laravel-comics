@@ -1,0 +1,75 @@
+.comicDetail {
+    h3 {
+        color: mainColors(4);
+    }
+    display: flex;
+    .comicInfo {
+        width: 75%;
+    }
+    .adv {
+        width: 25%;
+    }
+    .buyComic {
+        font-weight: bold;
+        @include dFlex('spaceBtwn'); 
+        background: mainColors(1);
+        color: $white;
+        border-bottom: 2px solid rgba($black, .2);
+        .price {
+            @include dFlex('spaceBtwn'); 
+            flex-grow: 1;
+            padding-right: 15px;
+            border-right: 2px solid rgba($black, .2);
+            padding: 15px 25px;
+        }
+        .availableDate {
+            opacity: .8;
+        }
+        .stock {
+            i {
+                padding-left: 15px;
+            }
+            padding: 15px 25px;
+        }
+    }
+    .description {
+       p {
+           line-height: 25px;
+       } 
+    }
+}
+
+.moreDetail {
+    background: rgba($black, .1);
+    .moreInfoList {
+        @include dFlex('center');
+        align-items: flex-start;
+        .talentList,
+        .specsList {
+            width: 100%;
+            .talentItem,
+            .specsItem {
+                @include dFlex('spaceBtwn');
+                font-weight: bold;
+                flex-grow: 1;
+                color: mainColors(4);
+                padding: 10px;
+                border-top: 1px solid rgba($black, .1);
+                &:last-child {
+                    border-bottom: 1px solid rgba($black, .1);                
+                }
+            }
+            .names {
+                min-width: 250px;
+                text-align: left;
+                .active {
+                    color: mainColors(3);
+                }
+            }
+        }
+        h4 {
+            font-size: 1.6rem;
+            color: mainColors(4);
+        }
+    }
+}

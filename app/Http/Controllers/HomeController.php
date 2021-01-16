@@ -12,13 +12,12 @@ class HomeController extends Controller
         $comics = config('dc-database');
 
         foreach ($comics as $key => $el) {
-
+            
             $urlName = Str::slug($el['title'], '-');
 
             $comics[$key]['urlName'] = $urlName;
         }
-        // dd($comics);
-    
+
         return view('home', compact('comics'));
-    }
+    } 
 }

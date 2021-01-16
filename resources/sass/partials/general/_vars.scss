@@ -1,0 +1,71 @@
+// Main colors
+$mainColors: (#55ba59,#32b8df, #0182f9, #003f5e, #303030, #1c1c1c );
+
+@function mainColors($col) {
+    @return nth($mainColors, $col)
+}
+
+$white: #fff;
+$black: #000;
+
+// Font Base
+$baseFont: 16px 'Alegreya Sans', sans-serif;
+
+// Display flex
+@mixin dFlex($type) {
+    display: flex;
+    @if ( $type == 'center' ) {
+        justify-content: center;
+        align-items: center;
+    }
+    @else if ( $type == 'left' ) {
+        justify-content: flex-start;
+        align-items: center;
+    }
+    @else if ( $type == 'right' ) {
+        justify-content: flex-end;
+        align-items: center;
+    }
+    @else if ( $type == 'spaceBtwn' ) {
+        justify-content: space-between;
+        align-items: center;
+    } @else {
+        display: flex;
+    }
+}
+
+// Position
+@mixin center($type) {
+    @if ( $type == 'ab-y' ) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @else if ( $type == 'ab-x' ) {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @else if ( $type == 'ab-xy' ) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%); 
+    }
+    @else if ( $type == 'fx-y' ) {
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    @else if ( $type == 'fx-x' ) {
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @else if ( $type == 'fx-xy' ) {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%); 
+    }
+}

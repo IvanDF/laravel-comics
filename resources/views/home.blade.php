@@ -1,9 +1,9 @@
-@extends('layouts.main-content')
+@extends('layouts.base-structure')
 
 @section('page-title')
-    <title>DC COMICS</title>
+    <title>DC COMICS - HOMEPAGE</title>
 @endsection
 
-@section('content')
+@section('main-content')
     @include('partials.comics')
 @endsection

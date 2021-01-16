@@ -1,57 +1,35 @@
-<div class="mainHeader">
-    <div class="topNav">
-        <div class="container ">
-            <ul class="hListRight txtRight">
-                <li>
-                    <a href="#">DC POWER <span class="apex">SM</span> VISA <span class="apex">&copy;</span></a>
+<header class="mainHeader">
+    <div class="primaryBg">
+        <div class="container navTop">
+            <ul class="hList navTopList">
+                <li class="navTopItem pX5">
+                    <a href="#">
+                        DC POWER <span class="apex">SM</span> VISA <span class="apex">&copy;</span>
+                    </a>
                 </li>
-                <li class="pl-1">
-                    <a href="#">ADDITIONAL DC SITES <i class="fas fa-angle-down"></i></a>
+                <li v-for="(el, i) in navbarTop" 
+                    class="navTopItem"
+                    @click="navTopActive = !navTopActive"
+                >
+                    <a href="#">
+                        @{{el.name}}<i v-if="el.icon" :class="el.icon"></i>
+                    </a>
                 </li>
             </ul>
         </div>
     </div>
-    <nav class="navbar pt-1 pb-1">
-        <div class="container hListSpaceBtw">
-            <a href="/">
-                <img src="{{ asset('img/logo/logo.png')}}" alt="CD COMICS LOGO">
-            </a>
-            <ul class="hList navbarList">
-                <!-- farlo in vue -->
-                <li class="navbarItem">
-                    <a href="">CHARACTERS</a>
+    <transition name="navTopSlide">
+        <ul v-for="(el, i) in navbarTop" class="topDropdown pY1" v-if="navTopActive">
+            <div class="container hList topDropdownMenu">
+                <li v-for="e in el.topDropdown" class="topDropdownItem">
+                    <a href="#">@{{e}}</a>
                 </li>
-                <li class="navbarItem">
-                    <a href="">COMICS</a>
-                </li>
-                <li class="navbarItem">
-                    <a href="">MOVIES</a>
-                </li>
-                <li class="navbarItem">
-                    <a href="">TV</a>
-                </li>
-                <li class="navbarItem">
-                    <a href="">GAMES</a>
-                </li>
-                <li class="navbarItem">
-                    <a href="">COLLECTIBLES</a>
-                </li>
-                <li class="navbarItem">
-                    <a href="">VIDEOS</a>
-                </li>
-                <li class="navbarItem">
-                    <a href="">FANS</a>
-                </li>
-                <li class="navbarItem">
-                    <a href="">NEWS</a>
-                </li>
-                <li class="navbarItem">
-                    <a href="">SHOP <i class="fas fa-angle-down"></i></a>
-                </li>
-            </ul>
-            <div class="search">
-                <input class="txtRight" type="text" placeholder="Search">
             </div>
+        </ul>
+    </transition>
+    <nav :class="['stickyNav pY1', !showNavbar ? 'hidden' : '']">
+        <div class="container mainNav">
+            @include('partials.main-navbar')
         </div>
     </nav>
-</div>
+</header>

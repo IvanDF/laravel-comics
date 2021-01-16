@@ -1,0 +1,111 @@
+// Container
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 15px;
+    &Small {
+        @extend .container;
+        max-width: 1100px;
+    }
+}
+
+// Colors
+.primary {
+    &Col {
+        color: mainColors(3);
+    }
+    &Bg {
+        background: mainColors(3);
+        color: $white;
+        a {
+            color: $white;
+        }
+    }
+}
+
+// Margins & Paddings
+@each $size in 0, 1, 2, 3, 4, 5 {
+    .mY#{$size} {
+        margin-top: $size + rem;
+        margin-bottom: $size + rem;
+    }
+    .mX#{$size} {
+        margin-left: $size + rem;
+        margin-right: $size + rem;
+    }
+    .pY#{$size} {
+        padding-top: $size + rem;
+        padding-bottom: $size + rem;
+    }
+    .pX#{$size} { 
+        padding-left: $size + rem;
+        padding-right: $size + rem;
+    }
+}
+
+// Lists
+.hList {
+    display: flex;
+    list-style: none;
+    &Center {
+        @extend .hList;
+        justify-content: center;
+        align-items: center
+    }
+}
+
+.vList {
+    @extend .hList;
+    flex-direction: column;
+}
+
+// Texts
+.txtUpper {
+    text-transform: uppercase;
+}
+
+.txtCenter {
+    text-align: center;
+}
+
+.txtRight {
+    text-align: right;
+}
+
+.txtLeft {
+    text-align: left;
+}
+
+// Images
+.imgResp {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+// Buttons
+.btn {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 20px;
+    font-size: 1.2rem;
+    box-shadow: 2px 6px 6px 4px rgba($black, .5);
+    cursor: pointer;
+    transition: background 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                box-shadow 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    &.btnOutline {
+        border: 2px solid mainColors(3);
+        color: $white;
+        padding: 15px 10px;
+        &:hover {
+            background: mainColors(3);
+            box-shadow: 4px 8px 10px 5px rgba($black, .5);
+        }
+        &:active {
+            box-shadow: 0 0 0 0 rgba($black, .5);
+            transition: box-shadow 200ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        }
+    }
+}

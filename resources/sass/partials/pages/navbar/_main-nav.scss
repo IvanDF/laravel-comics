@@ -1,0 +1,136 @@
+// Main navbar
+.stickyNav {
+    background: $white;
+    position: relative;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform 350ms ease-out;
+    &.hidden {
+        box-shadow: none;
+        transform: translate3d(0, -100%, 0);
+      }
+    &.scrolled {
+        position: fixed;
+    }
+    .mainNav {
+        position: relative;
+        @include dFlex('spaceBtwn');
+    }
+    .logoImg {
+        flex-basis: 80px;
+    }
+    a,
+    input {
+        color: rgba($black, .7);
+        font-weight: bold;
+        font-size: 1.2rem;
+        transition: color 250ms ease-in-out;
+    }
+    // Dropdown
+    .dropdownMenu {
+        padding: 10px;
+        position: absolute;
+        top: 35px;
+        z-index: 1;
+        background: $white;
+        white-space: nowrap;
+    }
+    .dropdownItem {
+        padding: 5px;
+        transition: 250ms ease-in-out;
+        &:hover {
+            > a {
+                color: mainColors(3);
+            }
+        }
+    }
+
+}
+
+.mainNavItem {  
+    position: relative;
+    transition: 250ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+        > a {
+            color: mainColors(3);
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-bottom: 0 solid mainColors(3);
+        transition: border 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    &:hover::after {
+        border-bottom: 5px solid mainColors(3);
+    }
+    i {
+        padding-left: 5px;
+        color: mainColors(3);
+    }
+}
+
+// Search
+.search {
+    width: 150px;
+    .searchBar {
+        @include center('ab-y');
+        right: 15px;
+        width: 150px;
+        padding: 5px 25px;
+        background: $white;
+        border: none;
+        border-bottom: 3px solid mainColors(3);
+        outline: none;
+        transition: width 250ms cubic-bezier(0.47, 0, 0.745, 0.715),
+                    text-align 250ms 2s,;
+        &::placeholder {
+            opacity: 1;
+            color: $black
+        }
+    }
+    .searchIcon,
+    .exitIcon {
+        @include center('ab-y');
+        right: 20px;
+        color: $black;
+        cursor: pointer;
+    }
+    .searchActive {
+        text-align: left;
+        right: 15px;
+        width: 88%;
+        transition: width 250ms cubic-bezier(0.47, 0, 0.745, 0.715);
+        &:after {
+            content: '\f200';
+            @include center('ab-y');
+            left: 0;
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+        }
+        & + .searchIcon {
+            @include center('ab-y');
+            right: 88%;
+            color: $black
+        }
+    }
+}
+
+// Transition with Vue
+.slide-fade-enter-active {
+    transition: all 250ms ease-in-out;
+}
+.slide-fade-leave-active {
+    transition: all 300ms cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+    transform: translateX(15px);
+    opacity: 0;
+}

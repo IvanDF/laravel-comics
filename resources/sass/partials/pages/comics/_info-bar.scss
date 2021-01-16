@@ -1,0 +1,45 @@
+.comics {
+    .infoBar {
+        padding: 50px;
+        background: mainColors(3);
+        .infoBarItem {
+            width: calc(100% / 5 - 20px);
+            padding: 0 20px;
+        }
+        img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        a {
+            display: flex;
+            align-items: center;
+            color: $white;
+        }
+    }
+}
+
+.moreDetail {
+    .infoBar {
+        margin-top: 100px;
+        border-top: solid rgba($black, .1) 1px;
+        .infoBarItem {
+            display: flex;
+            justify-content: center;
+            width: calc(100% / 4);
+            padding: 10px 0;
+            border-left: solid rgba($black, .1) 1px;
+            &:last-child {
+            border-right: solid rgba($black, .1) 1px;
+            }
+        }
+        img {
+            height: 40px;
+            margin-left: 20px;
+        }
+        a {
+            display: flex;
+            align-items: flex-start;
+            color: rgba($black, .3);
+        }
+    }
+}

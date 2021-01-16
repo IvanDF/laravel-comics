@@ -1,0 +1,60 @@
+.mainFooter {
+    background: url('../img/footer/footer-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgba($white, .6);
+    .footerNav {
+        position: relative;
+        z-index: 1;
+    }
+    .comicsList,
+    .shopList,
+    .dcList,
+    .sitesList {
+        padding-right: 30px;
+    }
+    .comicsItem,
+    .shopItem,
+    .dcItem,
+    .sitesItem {
+        padding: 1px 0;
+        a {
+            font-size: 0.9rem;
+            color: rgba($white, .6);
+            transition: color 200ms linear;
+            &:hover {
+                color: mainColors(3);
+                text-decoration: underline;
+            }
+        }
+    }
+    .footerBg {
+        position: relative;
+        z-index: 0;
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: url('../img/footer/logo-footer.png');
+            background-repeat: no-repeat;
+            background-size: 50%;
+            background-position: center right;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    h4 {
+        color: $white;
+        font-size: 1.4rem;
+        margin: 10px 0;
+    }
+    .copyInfo {
+        a {
+            color: mainColors(3);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
