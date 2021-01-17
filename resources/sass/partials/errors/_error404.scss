@@ -1,0 +1,27 @@
+.error404 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .text {
+        h2 {
+            position: relative;
+            font-size: 180px;
+            line-height: 150px;
+        }
+        small {
+            font-size: 22px;
+            letter-spacing: 2px;
+        }
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -25%;
+            width: 3px;
+            height: 150%;
+            background: #000;
+        }
+    }
+} 

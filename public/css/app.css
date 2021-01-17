@@ -6845,3 +6845,36 @@ h4 {
 .footerBottom .socialsList h4 {
   color: #0182f9;
 }
+
+.errors {
+  display: flex;
+  flex-direction: column;
+}
+
+.error404 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.error404 .text {
+  position: relative;
+}
+.error404 .text h2 {
+  position: relative;
+  font-size: 180px;
+  line-height: 150px;
+}
+.error404 .text small {
+  font-size: 22px;
+  letter-spacing: 2px;
+}
+.error404 .text::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -25%;
+  width: 3px;
+  height: 150%;
+  background: #000;
+}

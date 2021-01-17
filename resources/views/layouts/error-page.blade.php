@@ -12,7 +12,7 @@
     </head>
     <body>
         <!-- Vue Container -->
-        <div id="DC">
+        <div id="DC" class="errors">
             <!-- Main header  -->
             @include('partials.main-header')
 

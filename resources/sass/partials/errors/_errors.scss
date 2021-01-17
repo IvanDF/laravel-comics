@@ -1,0 +1,7 @@
+.errors {
+    display: flex;
+    flex-direction: column;
+}
+
+// Error 404 
+@import'partials/errors/error404'; 

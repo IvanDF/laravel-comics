@@ -31646,6 +31646,72 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('main-navbar', {
+  template: "\n        <ul class=\"mainNavList hList txtUpper\">\n            <li v-for=\"(el, i) in mainNavbar\" \n                :class=\"['mainNavItem pX1', el.dropdown ? 'dropdown' : '']\"\n                @click=\"showDropdown(i)\"\n            >\n                <a href=\"#\">{{ el.name }} <i v-if=\"el.dropdown\" :class=\"el.icon\"></i></a>\n                <transition name=\"slide-fade\">\n                    <ul class=\"dropdownMenu vList\" v-if=\"el.dropdown\" v-show=\"navItemIndex === i\">\n                        <li v-for=\"item in el.dropdown\" class=\"dropdownItem\">\n                            <a href=\"#\">\n                                {{item}}\n                            </a>\n                        </li>\n                    </ul>\n                </transition>\n            </li>\n        </ul>\n    ",
+  data: function data() {
+    return {
+      navItemIndex: '',
+      searchActive: false,
+      mainNavbar: [{
+        name: 'Characters'
+      }, {
+        name: 'Comics'
+      }, {
+        name: 'Movies'
+      }, {
+        name: 'TV'
+      }, {
+        name: 'Games'
+      }, {
+        name: 'Collectibles'
+      }, {
+        name: 'Videos'
+      }, {
+        name: 'Fans'
+      }, {
+        name: 'News'
+      }, {
+        name: 'Shop',
+        icon: 'fas fa-caret-down',
+        dropdown: ['Shop DC', 'Shop DC Collectibles', 'Print Subscription', 'Comic shop locator']
+      }]
+    };
+  },
+  methods: {
+    // show/hide dropdown
+    showDropdown: function showDropdown(index) {
+      if (this.navItemIndex === '') {
+        this.navItemIndex = index;
+      } else {
+        this.navItemIndex = '';
+      }
+    }
+  }
+});
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('info-bar', {
+  template: "\n        <div class=\"infoBar mY2\">\n            <div class=\"container\">\n                <ul class=\"infoBarList hListCenter\">\n                    <li v-for=\"el in infoBar\" class=\"infoBarItem\">\n                        <a href=\"#\">\n                            <img :src=\"findUrl + el.img\" :alt=\"el.title\">\n                            <h5 class=\"txtUpper\">{{el.title}}</h5>\n                        </a>\n                    </li>\n                </ul>\n            </div>\n        </div>\n    ",
+  data: function data() {
+    return {
+      findUrl: window.location.href,
+      infoBar: [{
+        img: 'img/comics/info-bar/digital-comics.png',
+        title: 'Digital comics'
+      }, {
+        img: 'img/comics/info-bar/merchandise.png',
+        title: 'DC Merchandise'
+      }, {
+        img: 'img/comics/info-bar/subscriptions.png',
+        title: 'Subscription'
+      }, {
+        img: 'img/comics/info-bar/shop-locator.png',
+        title: 'Comic shop locator'
+      }, {
+        img: 'img/comics/info-bar/power-visa.svg',
+        title: 'DC power visa'
+      }]
+    };
+  }
+});
 new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
   el: '#DC',
   data: {
@@ -31811,8 +31877,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/ivandf/Desktop/Altro/laravel-comics/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/ivandf/Desktop/Altro/laravel-comics/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/ivandf/Desktop/iDF/Boolean/Full-Time/Progetti/Back-End/laravel-comics/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/ivandf/Desktop/iDF/Boolean/Full-Time/Progetti/Back-End/laravel-comics/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

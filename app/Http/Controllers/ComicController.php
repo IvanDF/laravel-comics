@@ -21,6 +21,10 @@ class ComicController extends Controller
                 $comic = $el;
             }
         }
+        
+        if ( empty($comic) ) {
+            abort(404);
+        }
 
         return view('comic-detail', compact('comic'));
     }
