@@ -1,8 +1,7 @@
-require('./bootstrap');
-import { includes, method } from 'lodash';
-import Vue from 'vue';
+require("./bootstrap");
+import Vue from "vue";
 
-Vue.component('main-navbar',{
+Vue.component("main-navbar", {
     template: `
         <ul class="mainNavList hList txtUpper">
             <li v-for="(el, i) in mainNavbar" 
@@ -23,67 +22,65 @@ Vue.component('main-navbar',{
         </ul>
     `,
 
-    data () {
+    data() {
         return {
-
-            navItemIndex: '',   
+            navItemIndex: "",
             searchActive: false,
             mainNavbar: [
                 {
-                    name: 'Characters',
+                    name: "Characters"
                 },
                 {
-                    name: 'Comics',
+                    name: "Comics"
                 },
                 {
-                    name: 'Movies',
+                    name: "Movies"
                 },
                 {
-                    name: 'TV',
+                    name: "TV"
                 },
                 {
-                    name: 'Games',
+                    name: "Games"
                 },
                 {
-                    name: 'Collectibles',
+                    name: "Collectibles"
                 },
                 {
-                    name: 'Videos',
+                    name: "Videos"
                 },
                 {
-                    name: 'Fans',
+                    name: "Fans"
                 },
                 {
-                    name: 'News',
+                    name: "News"
                 },
                 {
-                    name: 'Shop',
-                    icon: 'fas fa-caret-down',
+                    name: "Shop",
+                    icon: "fas fa-caret-down",
                     dropdown: [
-                        'Shop DC',
-                        'Shop DC Collectibles',
-                        'Print Subscription',
-                        'Comic shop locator',
+                        "Shop DC",
+                        "Shop DC Collectibles",
+                        "Print Subscription",
+                        "Comic shop locator"
                     ]
-                },
-            ],
-
-        }
+                }
+            ]
+        };
     },
 
     methods: {
         // show/hide dropdown
         showDropdown(index) {
-            if ( this.navItemIndex === '' ) {
+            if (this.navItemIndex === "") {
                 this.navItemIndex = index;
             } else {
-                this.navItemIndex = ''
+                this.navItemIndex = "";
             }
-        },
+        }
     }
 });
 
-Vue.component('info-bar', {
+Vue.component("info-bar", {
     template: `
         <div class="infoBar mY2">
             <div class="container">
@@ -98,41 +95,39 @@ Vue.component('info-bar', {
             </div>
         </div>
     `,
-    data () {
+    data() {
         return {
-
             findUrl: window.location.href,
 
             infoBar: [
                 {
-                    img: 'img/comics/info-bar/digital-comics.png',
-                    title: 'Digital comics',
+                    img: "img/comics/info-bar/digital-comics.png",
+                    title: "Digital comics"
                 },
                 {
-                    img: 'img/comics/info-bar/merchandise.png',
-                    title: 'DC Merchandise',
+                    img: "img/comics/info-bar/merchandise.png",
+                    title: "DC Merchandise"
                 },
                 {
-                    img: 'img/comics/info-bar/subscriptions.png',
-                    title: 'Subscription',
+                    img: "img/comics/info-bar/subscriptions.png",
+                    title: "Subscription"
                 },
                 {
-                    img: 'img/comics/info-bar/shop-locator.png',
-                    title: 'Comic shop locator',
+                    img: "img/comics/info-bar/shop-locator.png",
+                    title: "Comic shop locator"
                 },
                 {
-                    img: 'img/comics/info-bar/power-visa.svg',
-                    title: 'DC power visa',
-                },
-            ],
-        }
-    },
+                    img: "img/comics/info-bar/power-visa.svg",
+                    title: "DC power visa"
+                }
+            ]
+        };
+    }
 });
 
-new Vue ({
-    el: '#DC',
+new Vue({
+    el: "#DC",
     data: {
-
         showNavbar: true,
         scrollPos: 0,
 
@@ -140,176 +135,155 @@ new Vue ({
         navTopActive: false,
         navbarTop: [
             {
-                name: 'ADDITIONAL DC SITES',
-                icon: 'fas fa-caret-down',
-                topDropdown: [
-                    'DC',
-                    'MAD MAGAZINE',
-                    'DC KIDS',
-                    'DC UNIVERSE'
-                ]
+                name: "ADDITIONAL DC SITES",
+                icon: "fas fa-caret-down",
+                topDropdown: ["DC", "MAD MAGAZINE", "DC KIDS", "DC UNIVERSE"]
             }
         ],
 
         // Main navbar
-        navItemIndex: '',   
+        navItemIndex: "",
         searchActive: false,
         mainNavbar: [
             {
-                name: 'Characters',
+                name: "Characters"
             },
             {
-                name: 'Comics',
+                name: "Comics"
             },
             {
-                name: 'Movies',
+                name: "Movies"
             },
             {
-                name: 'TV',
+                name: "TV"
             },
             {
-                name: 'Games',
+                name: "Games"
             },
             {
-                name: 'Collectibles',
+                name: "Collectibles"
             },
             {
-                name: 'Videos',
+                name: "Videos"
             },
             {
-                name: 'Fans',
+                name: "Fans"
             },
             {
-                name: 'News',
+                name: "News"
             },
             {
-                name: 'Shop',
-                icon: 'fas fa-caret-down',
+                name: "Shop",
+                icon: "fas fa-caret-down",
                 dropdown: [
-                    'Shop DC',
-                    'Shop DC Collectibles',
-                    'Print Subscription',
-                    'Comic shop locator',
+                    "Shop DC",
+                    "Shop DC Collectibles",
+                    "Print Subscription",
+                    "Comic shop locator"
                 ]
-            },
+            }
         ],
 
         // Footer menus
         comicsList: [
-            'Characters',
-            'Comics',
-            'Movies',
-            'TV',
-            'Games',
-            'Videos',
-            'News',
+            "Characters",
+            "Comics",
+            "Movies",
+            "TV",
+            "Games",
+            "Videos",
+            "News"
         ],
-        shopList: [
-            'Shop DC',
-            'Shop DC Collectibles',
-        ],
+        shopList: ["Shop DC", "Shop DC Collectibles"],
         dcList: [
-            'Terms Of Use',
-            'Privacy Policy (New)',
-            'Ad Choices',
-            'Advertising',
-            'Jobs',
-            'Subscriptions',
-            'Talent Workshop',
-            'CPSC Certificates',
-            'Ratings',
-            'Shop Help',
-            'Contact Us',
+            "Terms Of Use",
+            "Privacy Policy (New)",
+            "Ad Choices",
+            "Advertising",
+            "Jobs",
+            "Subscriptions",
+            "Talent Workshop",
+            "CPSC Certificates",
+            "Ratings",
+            "Shop Help",
+            "Contact Us"
         ],
-        sitesList: [
-            'DC',
-            'MAD Magazine',
-            'DC Kids',
-            'DC Universe',
-        ],
+        sitesList: ["DC", "MAD Magazine", "DC Kids", "DC Universe"],
 
         // Socials
         socialsList: [
             {
-                name: 'facebook',
-                link: 'https://www.facebook.com/dccomics',
-                icon: 'fab fa-facebook-f',
-
+                name: "facebook",
+                link: "https://www.facebook.com/dccomics",
+                icon: "fab fa-facebook-f"
             },
             {
-                name: 'twitter',
-                link: 'https://twitter.com/dccomics',
-                icon: 'fab fa-twitter',
-
+                name: "twitter",
+                link: "https://twitter.com/dccomics",
+                icon: "fab fa-twitter"
             },
             {
-                name: 'youtube',
-                link: 'http://www.youtube.com/user/DCEntertainmentTV',
-                icon: 'fab fa-youtube',
-
+                name: "youtube",
+                link: "http://www.youtube.com/user/DCEntertainmentTV",
+                icon: "fab fa-youtube"
             },
             {
-                name: 'pinterest',
-                link: 'http://www.pinterest.com/dccomics/',
-                icon: 'fab fa-pinterest',
-
+                name: "pinterest",
+                link: "http://www.pinterest.com/dccomics/",
+                icon: "fab fa-pinterest"
             },
             {
-                name: 'periscope',
-                link: 'https://www.periscope.tv/DCComics',
-                icon: 'fab fa-periscope',
-
-            },
+                name: "periscope",
+                link: "https://www.periscope.tv/DCComics",
+                icon: "fab fa-periscope"
+            }
         ]
     },
-    mounted () {
-        window.addEventListener('scroll', this.onScroll);
+    mounted() {
+        window.addEventListener("scroll", this.onScroll);
     },
     created() {
-        window.addEventListener('scroll', this.scrollTop);
+        window.addEventListener("scroll", this.scrollTop);
     },
     methods: {
-
-        onScroll () {
-
+        onScroll() {
             const currentScrollPosition = window.pageYOffset;
 
             if (currentScrollPosition < 0) {
-              return;
+                return;
             }
 
             if (Math.abs(currentScrollPosition - this.scrollPos) < 60) {
-              return;
+                return;
             }
 
             this.showNavbar = currentScrollPosition < this.scrollPos;
             this.scrollPos = currentScrollPosition;
         },
 
-        scrollTop () {
-
+        scrollTop() {
             let header = document.querySelector(".stickyNav");
 
-            if (window.scrollY > 50 && !header.className.includes('scrolled')) {
-                header.classList.add('scrolled'); 
+            if (window.scrollY > 50 && !header.className.includes("scrolled")) {
+                header.classList.add("scrolled");
             } else if (window.scrollY < 50) {
-                header.classList.remove('scrolled');
+                header.classList.remove("scrolled");
             }
         },
 
         // show/hide dropdown
         showDropdown(index) {
-            if ( this.navItemIndex === '' ) {
+            if (this.navItemIndex === "") {
                 this.navItemIndex = index;
             } else {
-                this.navItemIndex = ''
+                this.navItemIndex = "";
             }
-        },
+        }
     },
-    beforeDestroy () {
-        window.removeEventListener('scroll', this.onScroll)
+    beforeDestroy() {
+        window.removeEventListener("scroll", this.onScroll);
     },
-    destroyed () {
-        window.removeEventListener('scroll', this.handleSCroll);
-    },
+    destroyed() {
+        window.removeEventListener("scroll", this.handleSCroll);
+    }
 });
