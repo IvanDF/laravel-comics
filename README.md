@@ -6,7 +6,7 @@
 
 ---
 
-<p align="center">Web-Page of DC Comics that shows pics and descriptions about Comics selected.</p>
+<p align="center">DC Comics is a Web-Page that shows pics and descriptions about Comics selected.</p>
 <br> 
     
 ## ⛏️ Built With <a name = "tech_stack"></a>
